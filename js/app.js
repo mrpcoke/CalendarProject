@@ -25,7 +25,7 @@ const convertDateValue = (val) =>{
 
 const calcDateDiff = () =>{
 
-    //Initialise the variable for 
+    //Initialise the variables for 
     //the equivalent value of one day, 
     //date from and date to
     const oneDay = 24 * 60 * 60 * 1000; 
@@ -37,8 +37,8 @@ const calcDateDiff = () =>{
     if(dateFrom !== "" && dateTo !== ""){
 
     /* As referenced above we call our "convertDateValue"
-    function to convert out date values to have a "/"
-    delimiter instead of a "-" delimeter */
+    function to convert our date values to have a "/"
+    delimiter instead of a "-" delimiter */
     let convDateFrom = convertDateValue(dateFrom);
     let convDateTo = convertDateValue(dateTo);
 
@@ -51,7 +51,7 @@ const calcDateDiff = () =>{
     first rounding our total and making sure that we 
     render the total as a POSITIVE number by using the absolute 
     method in the math object, we then substract the date to
-    value from the date from values and divide our "oneDay" variable */
+    value from the date from value and divide by our "oneDay" variable */
     const numDays = Math.round(Math.abs(dtFrom - dtTo) / oneDay);
 
 
@@ -63,6 +63,6 @@ const calcDateDiff = () =>{
      
 }
 
-//Add action listener to button 
+//Add event listener to button 
 _('btnCalc').addEventListener('click', calcDateDiff);
 
